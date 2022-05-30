@@ -1,16 +1,21 @@
-import { useState } from 'react';
+//AppNavbar.js
+
+
+import { useState, useContext } from 'react';
 //React bootstrap components
 import { Navbar, Nav } from 'react-bootstrap';
 //react-router
 import { Link } from 'react-router-dom';
+import UserContext from '../UserContext';
 
 export default function AppNavbar() {
 
+
+	const { user } = useContext(UserContext);
 	//Store the user information (email) in the state
 	//getItem gets the key in the localStorage
-	const [ user, setUser ] = useState(localStorage.getItem('email'))
-	console.log(user)
-
+	// const [ user, setUser ] = useState(localStorage.getItem('email'))
+	// console.log(user)
 
 	return(
 		<Navbar bg="dark" expand="lg" variant="dark" className="mb-5">
@@ -22,7 +27,7 @@ export default function AppNavbar() {
 					<Nav.Link as={Link} to="/courses">Courses</Nav.Link>
 					
 
-					{(user !== null) ?
+					{(user.email !== null) ?
 						<Nav.Link as={Link} to="/logout">Logout</Nav.Link>
 
 						:
