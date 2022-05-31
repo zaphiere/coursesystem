@@ -11,7 +11,7 @@ export default function CoursePage() {
 	const [ allCourses, setAllCourses ] = useState([])
 	
 	const fetchData = () => {
-		fetch('http://localhost:4000/courses/all')
+		fetch('https://coursesystemnew.herokuapp.com/courses/all')
 		.then(res => res.json())
 		.then(data => {
 			console.log(data)

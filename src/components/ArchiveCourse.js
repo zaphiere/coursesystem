@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 export default function ArchiveCourse({ course, isActive, fetchData}) {
 
 	const archiveToggle = (courseId) => {
-		fetch(`http://localhost:4000/courses/${ courseId }/archive`,{
+		fetch(`https://coursesystemnew.herokuapp.com/courses/${ courseId }/archive`,{
 			method: 'PUT',
 			headers: {
 				Authorization: `Bearer ${ localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ export default function ArchiveCourse({ course, isActive, fetchData}) {
 
 	//for activating the course
 	const activateToggle = (courseId) => {
-		fetch(`http://localhost:4000/courses/${ courseId }/activate`, {
+		fetch(`https://coursesystemnew.herokuapp.com/courses/${ courseId }/activate`, {
 			method: 'PUT',
 			headers: {
 				Authorization: `Bearer ${ localStorage.getItem('accessToken')}`

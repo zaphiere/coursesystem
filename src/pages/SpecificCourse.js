@@ -19,7 +19,7 @@ export default function SpecificCourse() {
 
 	useEffect(() => {
 
-		fetch(`http://localhost:4000/courses/${courseId}`)
+		fetch(`https://coursesystemnew.herokuapp.com/courses/${courseId}`)
 		.then(res => res.json())
 		.then(data => {
 			setName(data.name)
