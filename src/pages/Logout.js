@@ -15,7 +15,7 @@ export default function Logout() {
 	//Set the user state back to it's original value
 	useEffect(() => {
 		setUser({
-			email: null
+			accessToken: null
 		})
 	}, [])
 

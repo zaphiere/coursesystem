@@ -26,7 +26,8 @@ function App() {
     //  this will be used to store the user information and will be used for validating if a user is logged in on the app or not
 
     const [ user, setUser ] = useState({
-        email: localStorage.getItem('email')
+        accessToken: localStorage.getItem('accessToken'),
+        isAdmin: localStorage.getItem('isAdmin') === 'true'
     })
 
     // function for clearing out localStorage on logout
