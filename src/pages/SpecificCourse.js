@@ -35,7 +35,7 @@ export default function SpecificCourse() {
 	//enroll function
 		const enroll = (courseId) => {
 
-			fetch('http://localhost:4000/users/enroll', {
+			fetch('https://coursesystemnew.herokuapp.com/users/enroll', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
